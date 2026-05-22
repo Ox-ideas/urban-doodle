@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1affbfc96339a911",
+        "id": "4f9bdb5232a99ff5",
         "type": "tabs",
         "children": [
           {
-            "id": "e197b0b84f3fe01c",
+            "id": "e2bbd48645f90bba",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "wiki/Concept - LLM Wiki.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Concept - LLM Wiki"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "AGENTS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for AGENTS"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "AGENTS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from AGENTS"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "AGENTS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of AGENTS"
             }
           }
         ]
@@ -173,9 +180,36 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "marp:Marp: Open Preview": false
     }
   },
-  "active": "e197b0b84f3fe01c",
-  "lastOpenFiles": []
+  "active": "e2bbd48645f90bba",
+  "lastOpenFiles": [
+    "raw/sources/processed/How To Build LLM Wiki In Obsidian? 🧠 A Memory Layer For Any Agentic AI.md",
+    "raw/sources/processed/Karpathy's LLM Wiki The Complete Guide to His Idea File.md",
+    "wiki/Concept - Idea File.md",
+    "wiki/Concept - Agentic Firewall.md",
+    "raw/sources/How To Build LLM Wiki In Obsidian? 🧠 A Memory Layer For Any Agentic AI.md",
+    "raw/sources/Karpathy's LLM Wiki The Complete Guide to His Idea File.md",
+    "wiki/Concept - Wiki vs RAG.md",
+    "wiki/Entity - Andrej Karpathy.md",
+    "wiki/Concept - Memex.md",
+    "wiki/Source - Karpathy LLM Wiki Guide.md",
+    "wiki/Entity - Wanderloots.md",
+    "wiki/Concept - Local LLM.md",
+    "wiki/Concept - Shared Memory Layer.md",
+    "wiki/Concept - LLM Wiki.md",
+    "wiki/Source - Wanderloots LLM Wiki Guide.md",
+    "Clippings/Karpathy's LLM Wiki The Complete Guide to His Idea File.md",
+    "TODO.md",
+    "Clippings",
+    "AGENTS.md",
+    "raw/sources/processed",
+    "wiki/log.md",
+    "GEMINI.md",
+    "wiki/index.md",
+    "raw/sources",
+    "raw/assets"
+  ]
 }
