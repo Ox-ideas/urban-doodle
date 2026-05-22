@@ -1,0 +1,20 @@
+.callout[data-callout="ideas"] {
+    --callout-color: 255,247,0;
+    --callout-icon: lucide-lightbulb;
+}
+
+.callout[data-callout="take-note"] {
+    --callout-color: 253,188,180; /* Melon */
+    --callout-icon: sun-medium;
+}
+
+.callout[data-callout="key-note"] {
+    /* --callout-color: 240,255,240; /* Honeydew */
+    --callout-color: 223,115,255; /* Heliotrope */
+    --callout-icon: file-key;
+}
+
+.callout[data-callout="my-note"] {
+    --callout-color: 204,255,0; /* Chartreuse */
+    --callout-icon: satellite-dish;
+}
