@@ -10,7 +10,6 @@ This document defines the idea, structure, conventions, and workflows for mainta
 ## Directory Structure
 
 - `raw/sources/`: Curated collection of source documents. Articles, papers, images, data files, videos (captions), etc. These are immutable. NEVER modify.
-- `raw/sources/processed/`: Archive for source documents that have already been ingested into the wiki.
 - `raw/assets/`: Images and other attachments.
 - `wiki/sources/`: LLM-generated summaries of raw source material.
 - `wiki/concepts/`: LLM-generated pages for abstract ideas, techniques, or theories.
@@ -68,11 +67,10 @@ wiki/
 ---
 title: Page Title
 type: concept | entity | source-summary | comparison
-sources: [list of raw/ files referenced]
+sources: [list of raw files referenced]
 related: [list of wiki pages linked]
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
-confidence: high | medium | low
 tags:
   - "concept"
   - "sample relevant tag"
@@ -96,14 +94,13 @@ tags:
 ---
 ```
 - **Tags**: Use simple plain tags.
+- **Obsidian Skills:** For all future source ingestions, utilize the Obsidian skills and automation configured in `.github/skills` within this devcontainer or in the case of gemini cli or other ai cli provide a way to install it accordingly. This ensures compatibility with Obsidian plugins, properties, and workflows, and leverages available automation for note creation, metadata, and linking.
 
 ## Workflows
 
 
 ### 1. Ingest
 When user says "ingest notes-" or requests to process the raw sources, ask which new source file or files to process (if possible provide a list that can be multi-selected):
-
-**Note:** For all future source ingestions, utilize the Obsidian skills and automation configured in `.github/skills` within this devcontainer. This ensures compatibility with Obsidian plugins, properties, and workflows, and leverages available automation for note creation, metadata, and linking.
 
 1. Read the source files in  `raw/`, `raw/sources/` including `raw/assets/` if needed. 
 2. Discuss key takeaways with the user.
@@ -112,19 +109,19 @@ When user says "ingest notes-" or requests to process the raw sources, ask which
 5. Update `wiki/index.md` with the new page(s).
 6. Append an entry to `wiki/log.md`.
 7. Maintain cross-references, and keep everything consistent.
-8. **Archive Source**: Move the successfully processed source file to `raw/sources/processed/`. This applies to all ingested sources, including those already ingested in the past. Ensure wiki page frontmatter references are updated if they used a relative path that changed.
+8. Show what you plan to do and ask me before proceeding.
 
 ### 2. Query
 When the user asks a question:
 1. Search `wiki/index.md` for relevant pages.
 2. Read the identified pages.
-3. Synthesize an answer with [[wiki-link]] citations.
+3. Synthesize an answer with [[wikilink]] citations.
 4. Do not invent citations or create unsupported claims.
 5. Answers can take different forms depending on the question — a markdown page, a comparison table, a slide deck (Marp), a chart (matplotlib), a canvas or others than can be processed with markdown files and obsidian. 
 6. If the answer is substantial, propose filing it as a new wiki page or append to a relevant existing page.
 
 ### 3. Lint
-When user says "lint notes-", check for:
+When user says "lint notes-" or asks to clean or health check the wiki, check for:
 - Contradictions between pages.
 - Stale claims superseded by newer sources.
 - Orphan pages (no inbound links).
@@ -132,6 +129,31 @@ When user says "lint notes-", check for:
 - Missing cross-references.
 - Data gaps that could be filled with a web search.
 - Suggest questions to investigate next.
+- Sample output:
+  Wiki Health Report (2026-04-04):
+
+  CONTRADICTIONS (2):
+  - concepts/dense-vs-sparse.md claims dense > sparse
+    below 10B, but sources/summary-moe-efficiency.md
+    shows opposite. Recommend: update with nuance.
+  - entities/openai.md says GPT-5 is 200B params,
+    but sources/summary-gpt5-leak.md says 300B.
+
+  ORPHAN PAGES (3):
+  - concepts/tokenization.md (no inbound links)
+  - sources/summary-old-bert-paper.md (no references)
+  - comparisons/old-gpu-benchmark.md (outdated)
+
+  MISSING PAGES (4):
+  - "RLHF" mentioned 12 times, no concept page
+  - "Constitutional AI" mentioned 8 times, no page
+  - "KV Cache" referenced in 5 sources, no page
+  - "Speculative Decoding" mentioned 3 times, no pages
+
+  SUGGESTED INVESTIGATIONS:
+  - No sources on inference optimization post-2025
+  - Entity page for Meta AI is thin (only 1 source)
+  - The "Scaling Laws" page hasn't been updated in 3 weeks
 
 ## Indexing and Logging
 
@@ -163,3 +185,8 @@ When user says "lint notes-", check for:
   ## [YYYY-MM-DD] ingest | [[Source Title]]
   Summary of what was updated.
   ```
+
+## Optional: CLI tools
+
+- At some point we will want to build small tools that help the LLM operate on the wiki more efficiently. A search engine over the wiki pages is the most obvious one — at small scale the index file is enough, but as the wiki grows you want proper search. qmd is a good option: it's a local search engine for markdown files with hybrid BM25/vector search and LLM re-ranking, all on-device. It has both a CLI (so the LLM can shell out to it) and an MCP server (so the LLM can use it as a native tool).
+- Make sure that the wiki setup is compatible with qmd.
