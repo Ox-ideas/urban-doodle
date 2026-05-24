@@ -1,32 +1,33 @@
 # Wiki Index
 
 ## Entities
-- [[Andrej Karpathy]] - AI researcher and proponent of the LLM Wiki pattern.
-- [[Antigravity.codes]] - Source of the Karpathy LLM Wiki guide.
-- [[Wanderloots]] - Creator of the LLM Wiki starter kit and "Shared Memory Layer" concept.
-- [[AI Impact]] - YouTube creator advocating AI-native knowledge management (Infinite Brain).
-- [[Tiago Forte]] - Creator of the PARA Method and Second Brain.
-- [[Claude]] - AI model by Anthropic, referenced in Infinite Brain context.
-- [[ChatGPT]] - AI model by OpenAI, referenced in Infinite Brain context.
-- [[qmd]] - Local search engine for markdown files.
-- [[Obsidian Web Clipper]] - Browser extension for clipping articles to Obsidian.
+- [[Wanderloots]] - Creator of the Obsidian-based LLM Wiki workflow.
+- [[AI Impact]] - Author arguing for the Infinite Brain architecture.
+- [[agentpedia.codes]] - Authored the complete guide to Karpathy's LLM Wiki.
+- [[Obsidian]] - Markdown vault and knowledge IDE used by the wiki.
+- [[Git]] - Version control system for safe wiki edits and rollback.
+- [[Obsidian CLI]] - Automation tool for agentic access to the Obsidian vault.
+- [[Olama]] - Local model runtime used for private draft and review workflows.
+- [[Andrej Karpathy]] - Thought leader referenced in the context of knowledge graph and second brain evolution.
 
 ## Concepts
-- [[LLM Wiki]] - A persistent, compounding knowledge base.
-- [[Shared Memory Layer]] - A shared context for humans and agents.
-- [[Idea File]] - A new open-source format for the AI agent era.
-- [[Wiki vs RAG]] - Comparison of knowledge management strategies.
-- [[Memex]] - Historical antecedent to the LLM Wiki (1945).
-- [[Agentic Firewall]] - Security wrapper for agents.
-- [[Local LLM]] - Running models privately via tools like Olama.
-- [[Infinite Brain]] - AI-native, granular knowledge management system.
-- [[Knowledge Graph]] - Structured, linked network of notes for AI reasoning.
-- [[Edge Types]] - Explicit relationship types in knowledge graphs.
-- [[Atomic Notes]] - Small, focused notes for efficient AI retrieval.
-- [[Second Brain]] - Human-centric PKM system (PARA Method).
-- [[PARA Method]] - Projects, Areas, Resources, Archives; critiqued as too coarse for AI.
+- [[LLM Wiki]] - Persistent, LLM-maintained knowledge layer built from raw sources and schema.
+- [[Knowledge Graph]] - Structured network of notes and relationships for better AI retrieval.
+- [[Infinite Brain]] - AI-centric note architecture with atomic notes and typed edge semantics.
+- [[Agentic AI]] - Automation layer for ingesting sources, maintaining the wiki, and enforcing schema.
+- [[Raw Sources]] - Immutable original materials that feed the wiki.
+- [[Schema]] - Contract that defines how the wiki is structured and maintained.
+- [[Frontmatter]] - YAML metadata used to standardize page data.
+- [[Templates]] - Reusable note structures that enforce consistent formatting.
+- [[Ingest]] - The process of converting raw sources into wiki content.
+- [[Maintenance]] - The ongoing workflow to keep the wiki healthy and consistent.
+- [[Lint]] - The audit pass that checks the wiki for structural and semantic issues.
+- [[Query]] - The process of searching the wiki and generating answers.
+
+## Comparisons
+- [[Second Brain vs Infinite Brain]] - Comparison of traditional PKM vs AI-centric Infinite Brain architecture.
 
 ## Sources
-- [[Source - Karpathy LLM Wiki Guide]] - Deep dive into Karpathy's "Idea File".
-- [[Source - Wanderloots LLM Wiki Guide]] - Practical guide to building a wiki in Obsidian.
-- [[Source - AI Impact Infinite Brain]] - Critique of Second Brain/PKM and proposal of Infinite Brain for AI.
+- [[Karphathy's LLM Wiki]] - Summary of the LLM Wiki idea file and its core workflows.
+- [[How To Build LLM Wiki In Obsidian]] - Summary of the Obsidian workflow transcript.
+- [[Don't Use Karpathy's Second Brain (I BUILT SOMETHING BETTER)]] - Summary of the Infinite Brain critique and design.
